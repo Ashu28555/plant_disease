@@ -8,9 +8,11 @@ from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage
 import os
 
-# Load the model and class indices
-model = load_model('plant_disease_vgg16_model.h5')
+from google.colab import drive
+drive.mount('/content/drive')
 
+model_path = 'https://drive.google.com/file/d/1fftXlxFl-LPcA3SGENUwwVxyQu1uNWNK/view?usp=drive_link'
+model = load_model(model_path)
 with open('class_indices.json', 'r') as f:
     class_indices = json.load(f)
 class_labels = {v: k for k, v in class_indices.items()}  # Invert the class indices
