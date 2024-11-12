@@ -8,8 +8,8 @@ from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage
 import os
 
-from google.colab import drive
-drive.mount('/content/drive')
+#from google.colab import drive
+#drive.mount('/content/drive')
 
 model_path = 'https://drive.google.com/file/d/1fftXlxFl-LPcA3SGENUwwVxyQu1uNWNK/view?usp=sharing'
 model = load_model(model_path)
